@@ -24,6 +24,6 @@ ElevatorController has REST API related to the elevator call made from the insid
     GET /elevator/{elevatorId}/status: To get the status of the elevator identified by the elevatorId
     PUT /elevator/{elevatorId}/stop: To stop the elevator identified by the elevatorId
     
-    #Test CASE
+    # Test CASE
     
     i have created a test case Class ElevatorTest to test the elevator simulation 
