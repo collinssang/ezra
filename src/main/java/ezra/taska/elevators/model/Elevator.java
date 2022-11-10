@@ -24,6 +24,7 @@ public class Elevator {
     private int id;
     private String name;
     @ManyToOne
+    @JoinColumn(name = "status")
     private Status status;
     @OneToOne
     @JoinColumn(name = "floor_no")

@@ -20,11 +20,11 @@ public class ElevatorHardware {
 
     public static ElevatorDirections getElevatorDirs(Integer elevatorID, ElevatorCallBacks callback) {
         ElevatorDirections f = elevatordirs.get(elevatorID);
-        if (f==null) {
-            //TODO: Change this to lookup the class that does the RMI call to hardware.
-            f = new ElevatorDirectionsImpl(callback);
-            elevatordirs.put(elevatorID, f);
-        }
+//        if (f==null) {
+//            //TODO: Change this to lookup the class that does the RMI call to hardware.
+//            f = new ElevatorDirectionsImpl(callback);
+//            elevatordirs.put(elevatorID, f);
+//        }
         return f;
     }
 }

@@ -15,12 +15,12 @@ import org.springframework.stereotype.Service;
 public class ElevatorDirectionsImpl implements ElevatorDirections {
     private boolean breaksOn = false;
     private int currentFloor = 0;
-    private final ElevatorCallBacks callback;
+//    private final ElevatorCallBacks callback;
 
-    public ElevatorDirectionsImpl(ElevatorCallBacks callback) {
-        if (callback == null) throw new IllegalArgumentException("callback cannot be null");
-        this.callback = callback;
-    }
+//    public ElevatorDirectionsImpl(ElevatorCallBacks callback) {
+//        if (callback == null) throw new IllegalArgumentException("callback cannot be null");
+//        this.callback = callback;
+//    }
 
 
     @Override

@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
  **/
 @Repository
 public interface RequestLogRepository extends JpaRepository<RequestsLogs, Integer> {
-    @Query("SELECT e FROM Elevator e WHERE e.floorNo.id = ?1 ORDER BY e.id DESC")
+    @Query("SELECT e FROM Elevator e WHERE e.floor_no.id = ?1 ORDER BY e.id DESC")
     RequestsLogs findAllByFloor_no(int pressed_from_floor);
 }
