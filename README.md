@@ -4,12 +4,14 @@ Java task A.  The program is written using java spring boot.
 Clone the project to your local machine. the jdk version is version 17. 
 database using is Postgres. Login to your postgress database and create a schema in my case named "ezra"
 
+open the cloned project folder using your preffered IDEA, preferably intellij (used when developing) and 
+
 run the application and by default it will create tables and insert initial values at the data.sql. 
 from the sql, it shows there are 5 lifts and the building is of 6 floors. and lift is bond to have status of different nature. 
 
 When the application starts we initialise and start the elevator thread as a singleton from BuildingServiceHelper
 
-##REST API
+# REST API
 
 BuildingController has REST API related to the elevator call made from each floor
 
