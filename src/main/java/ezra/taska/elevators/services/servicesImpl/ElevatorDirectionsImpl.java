@@ -2,7 +2,6 @@ package ezra.taska.elevators.services.servicesImpl;
 
 import ezra.taska.elevators.interfaces.ElevatorCallBacks;
 import ezra.taska.elevators.interfaces.ElevatorDirections;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,7 +17,6 @@ public class ElevatorDirectionsImpl implements ElevatorDirections {
     private int currentFloor = 0;
     private final ElevatorCallBacks callback;
 
-    @Autowired
     public ElevatorDirectionsImpl(ElevatorCallBacks callback) {
         if (callback == null) throw new IllegalArgumentException("callback cannot be null");
         this.callback = callback;
