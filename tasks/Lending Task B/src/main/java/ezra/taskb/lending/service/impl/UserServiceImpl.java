@@ -1,6 +1,10 @@
 package ezra.taskb.lending.service.impl;
 
+import ezra.taskb.lending.model.Users;
+import ezra.taskb.lending.repository.UserRepository;
 import ezra.taskb.lending.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Collins K. Sang
@@ -9,5 +13,22 @@ import ezra.taskb.lending.service.UserService;
  * UserServiceImpl
  * IntelliJ IDEA
  **/
+@Service
 public class UserServiceImpl implements UserService {
+    final UserRepository userRepository;
+
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Override
+    public Users save(Users users) {
+        return userRepository.save(users);
+    }
+
+    @Override
+    public Users findByPhoneNo(String phone_no) {
+        return userRepository.findByMsisdn(phone_no);
+    }
 }

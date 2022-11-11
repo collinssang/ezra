@@ -1,6 +1,7 @@
 package ezra.taskb.lending.service.impl;
 
 import ezra.taskb.lending.service.UserDefaultLoanService;
+import org.springframework.stereotype.Service;
 
 /**
  * Collins K. Sang
@@ -9,5 +10,6 @@ import ezra.taskb.lending.service.UserDefaultLoanService;
  * UserDefaultLoanServiceImpl
  * IntelliJ IDEA
  **/
+@Service
 public class UserDefaultLoanServiceImpl implements UserDefaultLoanService {
 }

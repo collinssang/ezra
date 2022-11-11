@@ -1,7 +1,9 @@
 package ezra.taskb.lending.repository;
 
 import ezra.taskb.lending.model.UserDefaultLoans;
+import ezra.taskb.lending.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -13,4 +15,7 @@ import org.springframework.stereotype.Repository;
  **/
 @Repository
 public interface UserDefaultLoansRepository extends JpaRepository<UserDefaultLoans, Integer> {
+
+    @Query("SELECT ud FROM UserDefaultLoans ud WHERE ud.users.id = ?1")
+    UserDefaultLoans findByUserId(Users user_id);
 }

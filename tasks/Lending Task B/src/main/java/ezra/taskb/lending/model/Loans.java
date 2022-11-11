@@ -2,6 +2,7 @@ package ezra.taskb.lending.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
 
@@ -21,9 +22,10 @@ public class Loans {
     @Column(name = "id", updatable = false, nullable = false)
     private int id;
 
+    @Value("${loan.limit.amount}")
     private double loan_limit;
     private double loan_amount;
-    private double loan_paid_amount;
+    private double loan_paid_amount = 0;
     @ManyToOne
     private Users user_id;
 
